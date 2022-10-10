@@ -1,8 +1,8 @@
-import React from 'react'
+import styles from './styles.module.css';
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className={ styles.footer }>
       <p>
         <span>PokeNext</span> &copy; 2022
       </p>
