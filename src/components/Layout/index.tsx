@@ -14,7 +14,7 @@ export default function Layout({ children }: LayoutProp){
         <title>PokeNext</title>
       </Head>
       <Navbar/>
-      <main>
+      <main className="main-container">
         { children }
       </main>
       <Footer/>
