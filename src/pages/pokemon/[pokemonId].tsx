@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { IResults } from "../../types/pokeApi";
 
+import styles from '../../styles/Pokemon.module.css';
+
 interface Props {
   pokemon: Pokemon;
 }
@@ -28,10 +30,9 @@ type pokemonId = {
   pokemonId: string;
 };
 export default function Pokemon({ pokemon }: Props) {
-  console.log("POKEMON", pokemon.name);
   return (
-    <>
-      <h1>{pokemon.name}</h1>
+    <div className={ styles.pokemon_container }>
+      <h1 className={ styles.title }>{pokemon.name}</h1>
       <Image
         src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`}
         width="200"
@@ -44,23 +45,23 @@ export default function Pokemon({ pokemon }: Props) {
       </div>
       <div>
         <h3>Tipo:</h3>
-        <div>
+        <div className={ styles.types_container }>
           {pokemon.types.map((item, index) => [
             <span key={index}>{item.type.name}</span>,
           ])}
         </div>
       </div>
-      <div>
-        <div>
+      <div className={ styles.data_container }>
+        <div className={ styles.data_height }>
           <h4>Altura:</h4>
           <p>{pokemon.height * 10} cm</p>
         </div>
-        <div>
+        <div className={ styles.data_weight }>
           <h4>Peso:</h4>
           <p>{pokemon.weight / 10} Kg</p>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
