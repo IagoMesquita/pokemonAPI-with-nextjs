@@ -47,7 +47,10 @@ export default function Pokemon({ pokemon }: Props) {
         <h3>Tipo:</h3>
         <div className={ styles.types_container }>
           {pokemon.types.map((item, index) => [
-            <span key={index}>{item.type.name}</span>,
+            <span 
+              key={index}
+              className={ `${styles.type} ${styles['type_' + item.type.name]}` }
+            >{item.type.name}</span>,
           ])}
         </div>
       </div>
