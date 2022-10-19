@@ -102,8 +102,6 @@ export const getStaticProps = async ({ params }: IContext) => {
     const res = await fetch(api);
     const data = await res.json();
 
-    console.log("POKEMON", data);
-
     return {
       props: { pokemon: data },
     };
