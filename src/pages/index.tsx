@@ -23,7 +23,7 @@ const Home: NextPage<PokemonsProps> = ({ pokemons }: PokemonsProps) => {
           alt="pokeball"
         />
       </div>
-      <div className={styles.pokemon_container}>
+      <div className={styles.pokemons_container}>
         {pokemons.map((pokemon) => (
           <Card key={pokemon.id} pokemon={pokemon} />
         ))}
