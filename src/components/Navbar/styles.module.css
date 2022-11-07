@@ -1,4 +1,6 @@
 .navbar {
+  /* position: fixed; */
+  /* z-index:2; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -6,16 +8,21 @@
   margin-bottom: 2em;
   background-color:#333;
   color: #fff;
-}
-
-.logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
 }
 
 .logo h1 {
   margin-left: .5em;
+}
+
+.logo  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: .5em;
+  color: #fff;
+  text-decoration: none;
 }
 
 .link_items {
@@ -29,6 +36,8 @@
 
 .link_items a {
   color: #fff;
+  font-size: 1.2em;
+  
   text-decoration: none;
   padding: 5px;
   transition: .4s;
@@ -38,3 +47,23 @@
 .link_items a:hover {
   border-color: #fff;
 }
+
+
+.hamburguer {
+  display: none;
+  font-size: 35px;
+
+}
+
+
+@media (max-width: 768px) {
+  .hamburguer {
+    display: block;
+  }
+
+  .link_items {
+    display: none;
+  }
+
+}
+

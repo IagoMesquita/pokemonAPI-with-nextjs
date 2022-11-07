@@ -4,8 +4,10 @@
   justify-content: center;
   align-items: center;
 
-  padding: 2em 1em;
-  width: 23%;
+  /* width: 23%; */
+  width: 252px;
+  height: 389px;
+  /* padding: 2em 1em; */
   margin-bottom: 2em;
   background-color: #333;
   color: #fff;
