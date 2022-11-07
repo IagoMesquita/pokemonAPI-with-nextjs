@@ -1,0 +1,33 @@
+.menu_mobile {
+
+  position: absolute;
+ 
+  width: 60%;
+  height: 100%;
+  z-index: 1;
+  background-color: #000;
+ 
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: .5s;
+ }
+ 
+ .active_menu {
+   transform: scaleX(1);
+ }
+ 
+
+@media (max-width: 768px) {
+  .hamburguer {
+    display: block;
+  }
+
+  .link_items {
+    display: none;
+  }
+
+  .active_menu {
+    transform: scaleX(1);
+  }
+
+}
