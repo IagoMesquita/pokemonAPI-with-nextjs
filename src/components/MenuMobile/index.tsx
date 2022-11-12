@@ -1,13 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Dispatch } from "react";
 
 import styles from "./styles.module.css";
- 
+
 type MenuMobileProps = {
   isActiveMenu: boolean;
-}
+  closedMenuMobile: Dispatch<boolean>;
+};
 
-export function MenuMobile({ isActiveMenu }: MenuMobileProps) {
+export function MenuMobile({ isActiveMenu, closedMenuMobile }: MenuMobileProps) {
   return (
     <>
       <div
@@ -15,8 +17,15 @@ export function MenuMobile({ isActiveMenu }: MenuMobileProps) {
           isActiveMenu ? styles.active_menu : ""
         }`}
       >
-        <nav className={styles.navbar_mobile}>
-          <Link href={"/"} >
+         <div className={styles.btn_closed} onClick={() => closedMenuMobile(false)}>
+          <i className="bi bi-x-circle"></i>
+        </div>
+        <nav
+          className={`${styles.navbar_mobile} ${
+            isActiveMenu ? styles.active_navbar : ""
+          }`}
+        >
+          <Link href={"/"}>
             <a className={styles.logo}>
               <Image
                 src="/images/pokeball.png"
@@ -46,5 +55,5 @@ export function MenuMobile({ isActiveMenu }: MenuMobileProps) {
         </nav>
       </div>
     </>
-  )
+  );
 }
