@@ -1,0 +1,27 @@
+.container_sortOption{
+  margin-bottom: 3rem;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 20%;
+}
+
+.container_option {
+  position: absolute;
+  z-index: 10;
+
+  border: 1px solid red;
+  width: 20%;
+  min-width: 10%;
+  height: 150px;
+
+  background-color: #fff;
+}
+
+.container_option li {
+  border-bottom: 1px solid gray;
+  padding: .2rem
+}
