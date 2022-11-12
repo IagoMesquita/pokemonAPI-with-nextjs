@@ -41,12 +41,12 @@ export function MenuMobile({ isActiveMenu, closedMenuMobile }: MenuMobileProps) 
               isActiveMenu ? styles.active_menu : ""
             }`}
           >
-            <li>
+            <li onClick={() => closedMenuMobile(false) }>
               <Link href={"/"}>
                 <a>Home</a>
               </Link>
             </li>
-            <li>
+            <li onClick={() => closedMenuMobile(false) }>
               <Link href={"/about"}>
                 <a>Sobre</a>
               </Link>
