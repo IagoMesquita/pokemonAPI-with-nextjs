@@ -5,11 +5,14 @@ import { IResults } from "../types/pokeApi";
 import Card from "../components/Card";
 
 import styles from "../styles/Home.module.css";
+import ButtonOptionalSortPokemons from "../components/ButtonOptionalSortPokemons";
 interface PokemonsProps {
   pokemons: IResults[];
 }
 
+
 const Home: NextPage<PokemonsProps> = ({ pokemons }: PokemonsProps) => {
+
   return (
     <>
       <div className={styles.title_container}>
@@ -25,6 +28,7 @@ const Home: NextPage<PokemonsProps> = ({ pokemons }: PokemonsProps) => {
           />
         </span>
       </div>
+      <ButtonOptionalSortPokemons />
       <div className={styles.pokemons_container}>
         {pokemons.map((pokemon) => (
           <Card key={pokemon.id} pokemon={pokemon} />
